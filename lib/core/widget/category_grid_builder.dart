@@ -1,7 +1,8 @@
 import 'package:dukaan/feature/home/ui/widget/category_card_item.dart';
+import 'package:dukaan/feature/product/ui/screen/products_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
+import 'package:get/get.dart';
 
 class CategoryListView extends StatelessWidget {
   CategoryListView({super.key, this.limit});
@@ -11,156 +12,134 @@ class CategoryListView extends StatelessWidget {
     {
       'title': 'Deals',
       'image': 'assets/images/image_page_view_one.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
     },
     {
       'title': 'Grocery',
       'image': 'assets/images/image_page_view_two.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
+      
     },
     {
       'title': 'Breakfast',
       'image': 'assets/images/image_page_view_three.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Dairy',
       'image': 'assets/images/image_page_view_four.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Snacks',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Bakery',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Cold Drinks',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Meat & Poultry Sea Food',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Vegetables & Fruits',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Hot Drinks',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Frozen',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Cleaning',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Meat & Poultry Sea Food',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Vegetables & Fruits',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Hot Drinks',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Frozen',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Cleaning',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Meat & Poultry Sea Food',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Vegetables & Fruits',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Hot Drinks',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Frozen',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
     {
       'title': 'Cleaning',
       'image': 'assets/images/image_page_view_five.jpeg',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/SnacksScreen");
-      },
+      "onTap": () => Get.to( SnacksScreen()),
+
     },
   ];
 
@@ -186,7 +165,7 @@ class CategoryListView extends StatelessWidget {
             return CategoryCardItem(
               title: categories[index]['title'],
               imagePath: categories[index]['image'],
-              onTap: () => categories[index]['onTap'](context),
+              onTap:  categories[index]['onTap'],
             );
           },
         ),

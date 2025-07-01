@@ -5,9 +5,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CategoryCardItem extends StatelessWidget {
   final String title;
   final String imagePath;
-  final VoidCallback? onTap;
+  final Function() onTap;
   const CategoryCardItem(
-      {required this.title, required this.imagePath, super.key, this.onTap});
+      {required this.title, required this.imagePath, super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {

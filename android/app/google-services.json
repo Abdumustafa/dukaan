@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "721463533222",
+    "project_id": "dukaan-a60ed",
+    "storage_bucket": "dukaan-a60ed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721463533222:android:602d37f74773f7afa21e67",
+        "android_client_info": {
+          "package_name": "com.example.dukaan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721463533222-4etu7jblqqrmv71lov6tg6f3vccirt53.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dukaan",
+            "certificate_hash": "f907a25a5dfd1a63563eb4bbde022bf4eda84b19"
+          }
+        },
+        {
+          "client_id": "721463533222-t1f3ijsvjm2vc09rojq7697quf11fehf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv3kmGn7YwxPFbFuVLuRgcvc6r0q3IuWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721463533222-t1f3ijsvjm2vc09rojq7697quf11fehf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "721463533222-30oa5pc4ovd9vi8poum3fe0ci5e9mt8d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.dukaan"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

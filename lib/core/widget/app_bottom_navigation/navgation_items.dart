@@ -6,11 +6,11 @@ class NavgationItems extends StatelessWidget {
       {super.key, required this.icon, required this.title, this.onTap});
   final IconData icon;
   final String title;
-  final void Function(BuildContext)? onTap;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap != null ? () => onTap!(context) : null,
+      onTap: onTap,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [

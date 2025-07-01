@@ -1,7 +1,8 @@
 import 'package:dukaan/feature/product/ui/widget/product_card.dart';
+import 'package:dukaan/feature/product_details/ui/screen/product_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
+import 'package:get/get.dart';
 
 class ListBuilderProductItem extends StatelessWidget {
   ListBuilderProductItem({
@@ -15,90 +16,81 @@ class ListBuilderProductItem extends StatelessWidget {
           'Chocolate bar stuffed  is the good product to buy, it is very tasty and delicious',
       'price': '174.00',
       'image': 'assets/images/snack.png',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/ProductDetailsScreen");
-      },
+     
+            "onTap":() => Get.to( ProductDetailsScreen()),
+
     },
     {
       'descriptionProduct':
           'Flavia wafer biscuits is the good product to buy, it is very tasty and delicious',
       'price': '18.00',
       'image': 'assets/images/snack.png',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/ProductDetailsScreen");
-      },
+            "onTap":() => Get.to( ProductDetailsScreen()),
+
     },
     {
       'descriptionProduct':
           'Jammy Wafer Rolls is the good product to buy, it is very tasty and delicious',
       'price': '42.00',
       'image': 'assets/images/snack.png',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/ProductDetailsScreen");
-      },
+            "onTap":() => Get.to( ProductDetailsScreen()),
+
     },
     {
       'descriptionProduct':
           'Molki milk chocolate is the good product to buy, it is very tasty and delicious',
       'price': '162.50',
       'image': 'assets/images/snack.png',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/ProductDetailsScreen");
-      },
+            "onTap":() => Get.to( ProductDetailsScreen()),
+
     },
     {
       'descriptionProduct':
           'Moments chocolate is the good product to buy, it is very tasty and delicious',
       'price': '48.00',
       'image': 'assets/images/snack.png',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/ProductDetailsScreen");
-      },
+            "onTap":() => Get.to( ProductDetailsScreen()),
+
     },
     {
       'descriptionProduct':
           'Chocolate bar stuffed  is the good product to buy, it is very tasty and delicious',
       'price': '174.00',
       'image': 'assets/images/snack.png',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/ProductDetailsScreen");
-      },
+            "onTap":() => Get.to( ProductDetailsScreen()),
+
     },
     {
       'descriptionProduct':
           'Flavia wafer biscuits is the good product to buy, it is very tasty and delicious',
       'price': '18.00',
       'image': 'assets/images/snack.png',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/ProductDetailsScreen");
-      },
+            "onTap":() => Get.to( ProductDetailsScreen()),
+
     },
     {
       'descriptionProduct':
           'Jammy Wafer Rolls is the good product to buy, it is very tasty and delicious',
       'price': '42.00',
       'image': 'assets/images/snack.png',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/ProductDetailsScreen");
-      },
+            "onTap":() => Get.to( ProductDetailsScreen()),
+
     },
     {
       'descriptionProduct':
           'Molki milk chocolate is the good product to buy, it is very tasty and delicious',
       'price': '162.50',
       'image': 'assets/images/snack.png',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/ProductDetailsScreen");
-      },
+            "onTap":() => Get.to( ProductDetailsScreen()),
+
     },
     {
       'descriptionProduct':
           'Moments chocolate is the good product to buy, it is very tasty and delicious',
       'price': '48.00',
       'image': 'assets/images/snack.png',
-      "onTap": (BuildContext ctx) {
-        ctx.push("/ProductDetailsScreen");
-      },
+            "onTap":() => Get.to( ProductDetailsScreen()),
+
     },
   ];
 
@@ -120,7 +112,7 @@ class ListBuilderProductItem extends StatelessWidget {
                     descriptionProduct: products[index]['descriptionProduct'],
                     price: products[index]['price'],
                     image: products[index]['image'],
-                    onTap: () => products[index]['onTap'](context)),
+                    onTap: products[index]['onTap']),
               ),
             ),
           ),

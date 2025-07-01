@@ -2,24 +2,45 @@ import 'dart:async';
 import 'package:dukaan/core/helper/spaces.dart';
 import 'package:dukaan/core/theming/styles.dart';
 import 'package:dukaan/core/widget/app_elevated_button.dart';
-import 'package:dukaan/feature/login/ui/widget/or_continue_with_google.dart';
+import 'package:dukaan/feature/Authantication/ui/screen/wapper.dart';
+import 'package:dukaan/feature/Authantication/ui/widget/or_continue_with_google.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
+import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
 
 class VerifyPhoneScreen extends StatefulWidget {
-  const VerifyPhoneScreen({super.key});
+  VerifyPhoneScreen({
+    super.key,
+    required this.vid,
+  });
+  final String vid;
 
   @override
   _VerifyPhoneScreenState createState() => _VerifyPhoneScreenState();
 }
 
 class _VerifyPhoneScreenState extends State<VerifyPhoneScreen> {
+  var code = "";
   TextEditingController otpController = TextEditingController();
   bool isButtonEnabled = false;
   int countdown = 30;
   late Timer timer;
+
+  signIn() async {
+    PhoneAuthCredential credential =
+        PhoneAuthProvider.credential(verificationId: widget.vid, smsCode: code);
+    try {
+      await FirebaseAuth.instance
+          .signInWithCredential(credential)
+          .then((value) => Get.offAll(Wapper()));
+    } on FirebaseException catch (e) {
+      Get.snackbar("Error", e.code);
+    } catch (e) {
+      Get.snackbar("Error", e.toString());
+    }
+  }
 
   @override
   void initState() {
@@ -46,9 +67,10 @@ class _VerifyPhoneScreenState extends State<VerifyPhoneScreen> {
     startTimer();
   }
 
-  void _onOtpChanged(String value) {
+  void _onOtpChanged(value) {
     setState(() {
-      isButtonEnabled = value.length == 4;
+      code = value;
+      isButtonEnabled = value.length == 6;
     });
   }
 
@@ -63,10 +85,7 @@ class _VerifyPhoneScreenState extends State<VerifyPhoneScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.pop(context),
-        ),
+       
         elevation: 0,
         backgroundColor: Colors.white,
       ),
@@ -94,18 +113,20 @@ class _VerifyPhoneScreenState extends State<VerifyPhoneScreen> {
                   width: double.infinity,
                   child: Pinput(
                     controller: otpController,
-                    length: 4,
+                    length: 6,
                     onChanged: _onOtpChanged,
                     defaultPinTheme: PinTheme(
-                      width: 50.w,
-                      height: 50.h,
                       textStyle: TextStyles.font20BlackBold,
+                      height: 70,
                       decoration: BoxDecoration(
                         border: Border(
-                          bottom: BorderSide(color: Colors.black, width: 2.w),
+                          bottom: BorderSide(
+                            color: Colors.black,
+                            width: 2.w,
+                          ),
                         ),
                       ),
-                      margin: EdgeInsets.symmetric(horizontal: 14.w),
+                      margin: EdgeInsets.symmetric(horizontal: 5.w),
                     ),
                   ),
                 ),
@@ -113,12 +134,9 @@ class _VerifyPhoneScreenState extends State<VerifyPhoneScreen> {
                 OrContinueWithGoogle(),
                 Spacer(),
                 AppElevatedButton(
-                  elevateText: "Continue",
-                  isButtonEnabled: isButtonEnabled,
-                  onPressed: () {
-                    context.go("/AddUserNameAndPassword");
-                  },
-                ),
+                    elevateText: "Continue",
+                    isButtonEnabled: isButtonEnabled,
+                    onPressed: () => signIn()),
               ],
             ),
           ),

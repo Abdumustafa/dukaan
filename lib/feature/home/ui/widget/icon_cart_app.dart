@@ -1,5 +1,6 @@
+import 'package:dukaan/feature/my_card/ui/screen/my_cart_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:get/get.dart';
 
 class IconCartApp extends StatefulWidget {
   const IconCartApp({super.key, required this.iconColor});
@@ -20,7 +21,7 @@ class _IconCartAppState extends State<IconCartApp> {
           icon: Icon(Icons.shopping_cart_outlined,
               color: widget.iconColor, size: 30),
           onPressed: () {
-            context.push("/MyCartScreen");
+            Get.to(() => MyCartScreen());
           },
         ),
         if (cartItemCount > 0)

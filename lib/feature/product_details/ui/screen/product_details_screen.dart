@@ -5,7 +5,6 @@ import 'package:dukaan/feature/home/ui/widget/icon_cart_app.dart';
 import 'package:dukaan/feature/product/ui/widget/vertical_list_builder_product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   const ProductDetailsScreen({super.key});
@@ -52,6 +51,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Column(
+            mainAxisSize: MainAxisSize.max,
             children: [
               Stack(
                 children: [

@@ -12,6 +12,7 @@ class BuildDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Icon(icon, color: color),
+      
       title: Text(title,
           style: TextStyle(
               fontSize: 16.sp, fontWeight: FontWeight.w500, color: color)),

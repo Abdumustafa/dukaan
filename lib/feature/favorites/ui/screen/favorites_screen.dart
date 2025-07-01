@@ -2,7 +2,6 @@ import 'package:dukaan/core/theming/styles.dart';
 import 'package:dukaan/core/widget/empty_message_screen_view.dart';
 import 'package:dukaan/feature/home/ui/widget/icon_cart_app.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class FavoritesScreen extends StatelessWidget {
   const FavoritesScreen({super.key});
